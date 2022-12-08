@@ -1,0 +1,37 @@
+.clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.clients-list {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.clients-link {
+  width: 170px;
+  height: 92px;
+  box-sizing: border-box;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #afb1b8;
+  transition: color var(--tra), border-color var(--tra);
+  &:hover,
+  &:focus {
+    border-color: #2196f3;
+  }
+}
+
+.clients-icon {
+  fill: currentColor;
+  .clients-link:hover & {
+    color: #2196f3;
+  }
+
+  .clients-link:focus & {
+    color: #2196f3;
+  }
+}
