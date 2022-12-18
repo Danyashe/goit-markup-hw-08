@@ -1,5 +1,9 @@
 .example {
   padding-bottom: 84px;
+  display: none;
+  @include desktop {
+    display: block;
+  }
 }
 
 .example__list {

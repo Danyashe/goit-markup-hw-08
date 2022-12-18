@@ -1,25 +1,52 @@
 .hero {
-  padding: 200px 0px;
-  width: 1600px;
+  padding: 118px 45px;
+  max-width: 480px;
   background-color: rgba(47, 48, 58, 0.4);
-  background-image: linear-gradient(
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url(../images/hero.jpg);
+  background-image: var(--gra), url(../images/hero-dg-mob.jpeg);
   margin: 0 auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  @include retina {
+    background-image: var(--gra), url(../images/hero-dg-mob-2x.jpeg);
+  }
+  @include mobile {
+    background-image: var(--gra), url(../images/hero-bg-tab.jpeg);
+    @include retina {
+      background-image: var(--gra), url(../images/hero-bg-tab-2x.jpeg);
+    }
+  }
+
+  @include tablet {
+    background-image: var(--gra), url(../images/hero.jpg);
+    @include retina {
+      background-image: var(--gra), url(../images/hero-2x.jpeg);
+    }
+  }
+
+  @include tablet {
+    max-width: 768px;
+  }
+
+  @include desktop {
+    max-width: 1600px;
+  }
 }
 
 .hero__title {
   font-style: normal;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.3636;
+  font-size: 26px;
+  line-height: 1.62;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
   margin-bottom: 30px;
+  @include desktop {
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 .hero__btn {

@@ -7,9 +7,11 @@
   display: flex;
   justify-content: center;
   gap: 30px;
+  flex-wrap: wrap;
 }
+
 .clients-link {
-  width: 170px;
+  width: 210px;
   height: 92px;
   box-sizing: border-box;
   border: 1px solid #afb1b8;
@@ -22,6 +24,13 @@
   &:hover,
   &:focus {
     border-color: #2196f3;
+  }
+  @include tablet {
+    width: 226px;
+  }
+
+  @include desktop {
+    width: 170px;
   }
 }
 
