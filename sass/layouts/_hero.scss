@@ -25,10 +25,12 @@
   }
 
   @include tablet {
+    padding: 118px 189px;
     max-width: 768px;
   }
 
   @include desktop {
+    padding: 200px 437px;
     max-width: 1600px;
   }
 }

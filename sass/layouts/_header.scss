@@ -28,7 +28,6 @@
   gap: 50px;
   @include tablet {
     display: flex;
-    margin-right: 96px;
   }
 }
 
@@ -105,7 +104,7 @@
 .contact__link {
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.1428;
   letter-spacing: 0.02em;
   color: var(--text-color);
@@ -119,6 +118,9 @@
   &:hover,
   &:focus {
     color: #2196f3;
+  }
+  @include desktop {
+    font-size: 14px;
   }
 }
 
@@ -185,8 +187,10 @@
   fill: #212121;
 }
 
-.menu-mob {
-  margin-bottom: 306px;
+.mob-menu-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .menu-mob__item:not(:last-child) {
@@ -195,6 +199,7 @@
 
 .menu-mob__item {
   color: #212121;
+  display: flex;
 }
 
 .menu-mob__link {
@@ -210,8 +215,17 @@
   }
 }
 
+.menu-mob__link.current {
+  position: relative;
+  color: #2196f3;
+}
+
 .contact-mob {
   margin-bottom: 64px;
+}
+
+.contact-mob__item:not(:last-child) {
+  margin-bottom: 32px;
 }
 
 .contact-mob__link-mob {
@@ -235,6 +249,14 @@
 .mob-soc {
   display: flex;
   gap: 20px;
+}
+
+.mob-soc-item:not(:last-child) {
+  padding-right: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+.mob-soc-item:not(:first-child) {
+  margin-left: -10px;
 }
 
 .mob-soc-link {
